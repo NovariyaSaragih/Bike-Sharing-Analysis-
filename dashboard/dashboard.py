@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load data
-hour = pd.read_csv('D:\SEMESTER 6\proyek_analisis_data_dicoding\dashboard\hour.csv')
-day = pd.read_csv('D:\SEMESTER 6\proyek_analisis_data_dicoding\dashboard\day.csv')
+hour = pd.read_csv('D:/SEMESTER 6/proyek_analisis_data_dicoding/dashboard/hour.csv')
+day = pd.read_csv('D:/SEMESTER 6/proyek_analisis_data_dicoding/dashboard/day.csv')
 
 # Merge Data
 combined_data = pd.concat([hour, day], axis=0)
@@ -24,8 +24,6 @@ if selected_question == 'Perbedaan Jumlah Peminjaman Sepeda Antara Hari Kerja da
     avg_rentals_holiday = day[day['workingday'] == 0]['cnt'].mean()
     diff_rentals = avg_rentals_workingday - avg_rentals_holiday
     
-    avg_rentals_workingday = day[day['workingday'] == 1]['cnt'].mean()
-    avg_rentals_holiday = day[day['workingday'] == 0]['cnt'].mean()
     fig, ax = plt.subplots()
     ax.bar(['Hari Kerja', 'Hari Libur'], [avg_rentals_workingday, avg_rentals_holiday])
     ax.set_title('Rata-rata Jumlah Peminjaman Sepeda\nAntara Hari Kerja dan Hari Libur\n')
