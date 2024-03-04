@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load data
-hour = pd.read_csv('D:\SEMESTER 6\proyek_analisis_data_dicoding\dataset\hour.csv')
-day = pd.read_csv('D:\SEMESTER 6\proyek_analisis_data_dicoding\dataset\day.csv')
+hour = pd.read_csv('./dataset/hour.csv')
+day = pd.read_csv('./dataset/day.csv')
 
 # Merge Data
 combined_data = pd.concat([hour, day], axis=0)
