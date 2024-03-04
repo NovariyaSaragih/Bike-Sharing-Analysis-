@@ -1,6 +1,6 @@
 # Proyek-Analisis-Data
 
-## Setup Environment
+### Setup Environment
 
 conda create --name main-ds python=3.11
 
@@ -10,5 +10,5 @@ pip install pandas numpy matplotlib seaborn
 
 pip install streamlit
 
-## Run Streamlit App
+### Run Streamlit App
 streamlit run dashboard.py
