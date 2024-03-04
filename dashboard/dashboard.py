@@ -4,7 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
 # Load data
 hour = pd.read_csv('D:\SEMESTER 6\proyek_analisis_data_dicoding\dashboard\hour.csv')
 day = pd.read_csv('D:\SEMESTER 6\proyek_analisis_data_dicoding\dashboard\day.csv')
@@ -62,7 +61,7 @@ elif selected_question == 'Pola Ketersediaan Sepeda Berdasarkan Jam, Hari, dan M
     axes[2].set_title('Pola Ketersediaan Sepeda Berdasarkan Musim')
     axes[2].set_xlabel('Musim')
     axes[2].set_ylabel('Jumlah Peminjaman')
-    axes[2].set_xticks(hour['season'].unique())  # Mengatur label musim sesuai data
+    axes[2].set_xticks(hour['season'].unique().tolist())  # Mengatur label musim sesuai data
     axes[2].set_xticklabels(['Musim 1 (Spring)', 'Musim 2 (Summer)', 'Musim 3 (Fall)', 'Musim 4 (Winter)'])  # Mengganti label musim
 
     st.pyplot(fig)
