@@ -17,6 +17,8 @@ lalu di terminal anaconda prompt ketik:
 
 conda activate main-ds
 
+pip install pandas numpy matplotlib seaborn 
+
 pip install streamlit
 
 # Run Streamlit App
