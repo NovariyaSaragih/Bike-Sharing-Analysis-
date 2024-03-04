@@ -1,19 +1,8 @@
 # Proyek-Analisis-Data
 
 ## Setup Environment
-download anaconda prompt
 
-di bagian environtment klik tombol create 
-
-name environtment : main-ds
-
-packages : Python 
-
-lalu klik create
-
-lalu klik main-ds klik open terminal
-
-lalu di terminal anaconda prompt ketik: 
+conda create --name main-ds python=3.11.5
 
 conda activate main-ds
 
