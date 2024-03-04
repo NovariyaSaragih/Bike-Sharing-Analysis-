@@ -21,5 +21,5 @@ pip install pandas numpy matplotlib seaborn
 
 pip install streamlit
 
-# Run Streamlit App
+## Run Streamlit App
 streamlit run dashboard.py
