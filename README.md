@@ -1,7 +1,7 @@
 # Proyek-Analisis-Data
 
-# Setup Environment
-download anaconda prompt
+## Setup Environment
+##download anaconda prompt
 di bagian environtment klik tombol create 
 name environtment : main-ds
 packages : Python 
