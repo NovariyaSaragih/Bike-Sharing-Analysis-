@@ -5,8 +5,8 @@ import seaborn as sns
 import streamlit as st
 
 # Load data
-hour_data = pd.read_csv('hour.csv')
-day_data = pd.read_csv('day.csv')
+hour_data = pd.read_csv('./dataset/hour.csv')
+day_data = pd.read_csv('./dataset/day.csv')
 
 # Fungsi untuk perhitungan interval kepercayaan
 def calculate_confidence_interval(data):
