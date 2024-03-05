@@ -2,6 +2,8 @@
 
 ### Setup Environment
 
+Install Streamlit dan library di terminal atau command prompt dengan mengetikkan:
+
 pip install pandas numpy matplotlib seaborn 
 
 pip install streamlit
