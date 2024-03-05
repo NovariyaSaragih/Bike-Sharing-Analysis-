@@ -23,11 +23,8 @@ def calculate_confidence_interval(data):
 avg_rentals_workingday = day_data[day_data['workingday'] == 1]['cnt'].mean()
 avg_rentals_holiday = day_data[day_data['workingday'] == 0]['cnt'].mean()
 
-plt.bar(['Hari Kerja', 'Hari Libur'], [avg_rentals_workingday, avg_rentals_holiday])
-plt.title('Rata-rata Jumlah Peminjaman Sepeda\nAntara Hari Kerja dan Hari Libur\n')
-plt.xlabel('Hari')
-plt.ylabel('Rata-rata Jumlah Peminjaman')
-plt.show()
+# Menampilkan plot menggunakan Streamlit
+st.bar_chart({'Hari Kerja': avg_rentals_workingday, 'Hari Libur': avg_rentals_holiday})
 
 # Visualisasi untuk pertanyaan 2: Pola Ketersediaan Sepeda Berdasarkan Jam, Hari, dan Musim
 fig, axes = plt.subplots(3, 1, figsize=(12, 18))
@@ -49,8 +46,8 @@ axes[2].set_ylabel('Jumlah Peminjaman')
 axes[2].set_xticks(hour_data['season'].unique())
 axes[2].set_xticklabels(['Musim 1 (Spring)', 'Musim 2 (Summer)', 'Musim 3 (Fall)', 'Musim 4 (Winter)'])
 
-plt.tight_layout()
-plt.show()
+# Menampilkan plot menggunakan st.pyplot
+st.pyplot(fig)
 
 # Visualisasi untuk pertanyaan 3: Perbedaan Penggunaan Sepeda antara di Jam Hari Kerja dan Akhir Pekan dengan Interval Kepercayaan
 hourly_usage_weekday = hour_data[hour_data['workingday'] == 1].groupby('hr')['cnt'].mean()
@@ -69,4 +66,6 @@ plt.title('Perbedaan Penggunaan Sepeda antara di Jam Hari Kerja dan Akhir Pekan\
 plt.legend()
 plt.xticks(range(0, 24))
 plt.grid(True)
-plt.show()
+
+# Menampilkan plot menggunakan st.pyplot
+st.pyplot()
