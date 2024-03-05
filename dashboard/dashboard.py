@@ -5,8 +5,8 @@ import seaborn as sns
 import streamlit as st
 
 # Load data
-hour_data = pd.read_csv('.dashboard/hour.csv')
-day_data = pd.read_csv('./dashboard/day.csv')
+hour_data = pd.read_csv('./dataset/hour.csv')
+day_data = pd.read_csv('./dataset/day.csv')
 
 # Informasi Biodata Pribadi
 st.sidebar.title('Welcome To My Dashboard')
