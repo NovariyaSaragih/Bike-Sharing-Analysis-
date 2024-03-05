@@ -18,6 +18,9 @@ def calculate_confidence_interval(data):
     lower_bound = mean - margin_of_error
     upper_bound = mean + margin_of_error
     return lower_bound, upper_bound
+    
+# Set title
+st.title('Dashboard Bike Sharing Dataset')
 
 # Visualisasi untuk pertanyaan 1: Rata-rata Jumlah Peminjaman Sepeda Antara Hari Kerja dan Hari Libur
 avg_rentals_workingday = day_data[day_data['workingday'] == 1]['cnt'].mean()
