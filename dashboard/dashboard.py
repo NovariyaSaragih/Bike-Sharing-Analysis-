@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
+# Set option to disable the warning
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 # Load data
 hour_data = pd.read_csv('./dataset/hour.csv')
 day_data = pd.read_csv('./dataset/day.csv')
