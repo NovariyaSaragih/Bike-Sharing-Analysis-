@@ -5,8 +5,8 @@ import seaborn as sns
 import streamlit as st
 
 # Load data
-hour_data = pd.read_csv('hour.csv')
-day_data = pd.read_csv('day.csv')
+hour_data = pd.read_csv('/dashboard/hour.csv')
+day_data = pd.read_csv('/dashboard/day.csv')
 
 # Pertanyaan 1: Visualisasi rata-rata jumlah peminjaman sepeda pada hari kerja dan hari libur
 @st.cache
